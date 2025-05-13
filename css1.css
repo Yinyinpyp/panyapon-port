@@ -7,8 +7,8 @@
 }
 
 html, body {
-    height: 100%; /* ตั้งค่าความสูงให้เต็ม */
-    margin: 0; /* ลบ margin เริ่มต้น */
+    height: 100%;
+    margin: 0; 
 }
 
 
@@ -16,7 +16,7 @@ body {
 
     background-color: #ffffff;
     color: #333;
-    font-family: 'Roboto', sans-serif; /* เปลี่ยนเป็นชื่อฟอนต์ที่คุณเลือก */
+    font-family: 'Roboto', sans-serif; 
     
     
 }
@@ -25,7 +25,7 @@ html {
   }
 
 @font-face {
-    font-family: 'MyCustomFont'; /* ชื่อฟอนต์ที่คุณกำหนดเอง */
+    font-family: 'MyCustomFont';
     src: url('/path/to/font/MyCustomFont.woff2') format('woff2'),
          url('/path/to/font/MyCustomFont.woff') format('woff');
     font-weight: normal;
@@ -33,42 +33,42 @@ html {
 }
 
 body {
-    font-family: 'MyCustomFont', sans-serif; /* ใช้ฟอนต์ที่กำหนด */
+    font-family: 'MyCustomFont', sans-serif; 
 }
 
 
 
 
 .container {
-    display: grid; /* ใช้ Grid Layout */
-    grid-template-columns: 95px 1fr; /* กำหนดความกว้างของคอลลัม */
-    height: 100vh; /* ให้ความสูงเต็มหน้าจอ */
-    position: fixed; /* หรือใช้ absolute ได้ขึ้นอยู่กับกรณีการใช้งาน */
+    display: grid; 
+    grid-template-columns: 95px 1fr; 
+    height: 100vh; 
+    position: fixed; 
     top :0;
-    left: 0; /* กำหนดให้อยู่ทางซ้ายสุด */
+    left: 0; 
     color: #F8F5F5;
     overflow: auto;
 }
 
 .sidebar {
-    background-color: #f0f0f0; /* สีพื้นหลังของแถบ */
-    padding: 30px; /* เพิ่ม padding */
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* เพิ่มเงา */
+    background-color: #f0f0f0; 
+    padding: 30px; 
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); 
 }
 
 .sidebar a {
     color: #FFAE58;
     font-size: 25px;
     font-weight: bold;
-    position: fixed; /* <- ใช้ fixed เท่านั้น */
+    position: fixed; 
     text-decoration: none;
     top: -10px;
-    z-index: 999999; /* ลองเพิ่มค่ามากขึ้นอีกได้ */
+    z-index: 999999; 
 }
 .anuphan-text {
   font-family: "Anuphan", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400; /* เปลี่ยนค่านี้ตามความหนาที่ต้องการ เช่น 100, 300, 400, 700 */
+  font-weight: 400; 
   font-style: normal;
 }
 
@@ -78,22 +78,22 @@ body {
 
 
 .logo {
-    max-width: 100%; /* ทำให้โลโก้ไม่เกินขนาด */
-    height: auto; /* รักษาอัตราส่วน */
-    margin-bottom: 20px; /* เพิ่มระยะห่างด้านล่าง */
+    max-width: 100%; 
+    height: auto; 
+    margin-bottom: 20px; 
     width: 100%;
     
 }
 
 .main-content {
-    padding: 20px; /* เพิ่ม padding */
-    overflow: auto; /* ให้เนื้อหาสามารถเลื่อนเมื่อเกินพื้นที่ */
+    padding: 20px; 
+    overflow: auto; 
 }
 
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* สำคัญมาก: กันล้นเพราะ padding */
+    box-sizing: border-box; 
   }
   
   header {
@@ -118,7 +118,32 @@ body {
   
 
 
-
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    height: 70px;
+    padding: 10px 20px;
+    background-color: #aa7b7b;
+  }
+  
+  nav h1, nav ul {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+  
+  
+  nav h1 {
+    margin: 0;
+    padding: 0 10px;
+    font-family: 'Tuffy', serif;
+    font-size: 30px;
+    color: #f0f0f0;
+    flex: 1; 
+  }
+  
 
 
 
@@ -130,16 +155,16 @@ body {
     z-index: 1000;
     font-size: 30px;
     padding: 10px 20px;
-    color: #ffffff; /* ตัวหนังสือเริ่มต้นเป็นสีขาว */
+    color: #ffffff;
     transition: background-color 0.3s ease, color 0.3s ease;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 nav h1 {
-  position: relative; /* หรือจะไม่ใส่ก็ได้ถ้าไม่ได้ใช้ positioning แบบพิเศษ */
-  right: 700px;             /* จัดให้อยู่ชิดซ้าย */
+  position: relative; 
+  right: 300px;            
   color: #f0f0f0;
   font-size: 30px;
-  margin-left: 20px;      /* เผื่อมี margin */
+  margin-left: 500px;      
   padding-left: 0;
   text-align: left;
 }
@@ -163,6 +188,7 @@ nav a {
   font-family: 'Tuffy', serif;
   font-size: 20px;
   color: #f0f0f0;
+  margin-left: 100px;
 }
 
 ul {
@@ -172,9 +198,10 @@ ul {
     padding: 0;
     margin: 0;
     overflow-x: auto;
-    justify-content: flex-end;  /* เมนูชิดขวา */
+    justify-content: flex-end;  
     color: #000000;
 }
+
 
   
   li {
@@ -183,12 +210,12 @@ ul {
   
   a {
     text-decoration: none;
-    white-space: nowrap; /* ไม่ตัดคำ */
+    white-space: nowrap; 
   }
   
 
 a:hover {
-    background-color: #f0f0f0; /* เปลี่ยนสีพื้นหลังเมื่อ hover */
+    background-color: #f0f0f0; 
 }
 
 
@@ -200,8 +227,8 @@ a:hover {
   white-space: nowrap;
   overflow: hidden;
   border-right: 2px solid #333;
-  min-width: 320px; /* ปรับขนาดตามข้อความยาวสุด */
-  height: 100px;      /* ป้องกันขยับแนวตั้ง */
+  min-width: 320px; 
+  height: 100px;      
   margin-left: 0px;
   font-family: 'Poppins', sans-serif;
   
@@ -210,27 +237,43 @@ a:hover {
 
 #typewriter {
   display: inline-block;
-  min-width: 240px; /* หรือกว้างพอสำหรับ "Panyaporn Kiatrungrit" */
+  min-width: 240px; 
   font-size: 50px;
 }
+@media screen and (max-width: 768px) {
+  #typewriter {
+    font-size: clamp(24px, 6vw, 40px);
+    margin-top: 160px;
+    min-width: 180px;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  #typewriter {
+    font-size: clamp(20px, 7vw, 35px);
+    margin-top: 180px;
+    min-width: 140px;
+  }
+}
 
 
 
 
 
-/* การเคลื่อนที่จากซ้าย */
+
 @keyframes slideIn {
     0% {
-        transform: translateX(-20px); /* เริ่มจากซ้าย */
-        opacity: 0; /* เริ่มจากมองไม่เห็น */
+        transform: translateX(-20px); 
+        opacity: 0; 
     }
     100% {
-        transform: translateX(0); /* ย้ายมาที่ตำแหน่งเดิม */
-        opacity: 1; /* มองเห็นเต็มที่ */
+        transform: translateX(0); 
+        opacity: 1; 
     }
 }
 
-/* การสั่นสะเทือน */
+
 @keyframes shake {
     0% { transform: translateX(0); }
     25% { transform: translateX(-5px); }
@@ -244,7 +287,7 @@ a:hover {
 
 .profile-picture {
     display: flex;
-    justify-content: flex-end; /* จัดให้รูปอยู่ทางขวาของคอนเทนเนอร์ */
+    justify-content: flex-end; 
 }
 .profile-picture img {
     width: 350px;
@@ -252,7 +295,7 @@ a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: absolute;
     right: 90px;
-    top: 50px; /* ค่านี้ยิ่งน้อย → ยิ่งขยับขึ้น */
+    top: 50px; 
   }
   
 
@@ -270,24 +313,48 @@ main {
   height: auto;
   float: left;
   margin-left: 730px;
-  margin-top: -40px;
+  margin-top: -50px;
 
-  /* เริ่มต้นแบบโปร่งใสและเลื่อนไปทางขวา */
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+
   opacity: 0;
   transform: translateX(100px);
-  
-  /* เรียกใช้ animation ที่กำหนดไว้ */
   animation: fadeInSlideRight 1.5s ease-out forwards;
 }
+
 
 @keyframes fadeInSlideRight {
   from {
     opacity: 0;
-    transform: translateX(100px); /* ลอยมาจากขวา */
+    transform: translateX(100px);
   }
   to {
     opacity: 1;
-    transform: translateX(0); /* เข้าที่ */
+    transform: translateX(0);
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .intro img {
+    width: 90%;
+    margin-left: 10px;
+    margin-top: -150px;
+    float: none;
+  }
+}
+
+
+
+@keyframes fadeInSlideRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px); 
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); 
   }
 }
 
@@ -312,8 +379,8 @@ main {
 .intro h2{
   max-width: 50%;
   position: absolute;
-  left: 200px; /* ลดจาก 150px → ขยับไปทางซ้าย */
-  top: 200px;  /* ลดจาก 250px → ขยับขึ้นบน */
+  left: 200px; 
+  top: 200px;  
 }
 
 .intro h1 {
@@ -353,7 +420,7 @@ main {
 
 
 .intro2 {
-    position: relative; /* ต้องกำหนดให้ตำแหน่งอ้างอิงได้ */
+    position: relative; 
 }
 
 .intro2 img {
@@ -374,37 +441,55 @@ main {
     cursor: pointer;
     font-size: 12px;
     border-radius: 5px;
-    margin-top: 50px; /* ขยับปุ่มลงมา 20px */
+    margin-top: 50px; 
     margin-left: 90px;
 }
+.icon-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  position: relative; 
+  z-index: 10; 
+}
+
+
+
 .icon-container img {
+  width: 35px;
+  height: 35px;
+  margin: 5px;
+  margin-top: 15px;
+  padding: 0;
+  display: block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+.icon-container a {
+  display: inline-block; 
+}
+
+
+.icon-container img:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+
+
+@media screen and (max-width: 50px) {
+  .icon-container {
+    justify-content: center; 
+  }
+
+  .icon-container img {
     width: 60px;
     height: 60px;
     margin: 5px;
-    margin-top: 15px;
-    padding: 0;
-    display: block;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* เงาด้านล่างนุ่ม ๆ */
-    border-radius: 8px; /* ถ้าอยากให้มุมมนนิด ๆ ก็ดูสวยขึ้น */
-    transition: box-shadow 0.3s ease;
   }
-  
-  .icon-container img:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* เพิ่มเงาเวลา hover */
-  }
-  
-  
-  
-  .icon-container img {
-    width: 40px;   /* ปรับขนาดรูป */
-    height: 40px;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .icon-container img:hover {
-    transform: scale(1.1); /* ขยายเล็กน้อยเวลา hover */
-  }
+}
+
 
   .icon-container1 img {
     width: 10px;
@@ -413,8 +498,8 @@ main {
     margin-top: 15px;
     padding: 0;
     display: block;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* เงาด้านล่างนุ่ม ๆ */
-    border-radius: 8px; /* ถ้าอยากให้มุมมนนิด ๆ ก็ดูสวยขึ้น */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+    border-radius: 8px; 
     transition: box-shadow 0.3s ease;
 
     position: relative;
@@ -427,29 +512,29 @@ main {
   
 
 
-/* กำหนดสไตล์เริ่มต้น */
+
 .nav-link {
   color: #ffffff;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-/* เมื่อชี้เมาส์ */
+
 .nav-link:hover {
   color: #afacaa;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-/* เมื่ออยู่ในตำแหน่งที่ต้องการ */
+
 .nav-link.active {
-  color: #595959; /* เปลี่ยนเป็นสีดำ */
+  color: #595959; 
   font-weight: bold;
 }
 
 
   .content {
-    height: 100vh; /* ให้แต่ละ section ครอบคลุมความสูงเต็มจอ */
+    height: 100vh; 
     padding: 20px;
     border: 1px solid #ccc;
   }
@@ -463,21 +548,17 @@ main {
     padding: 10px 20px;
     cursor: pointer;
     font-size: 20px;
-    border-radius: 999px; /* ทำให้ปุ่มเป็นวงรี */
+    border-radius: 999px; 
     top: 50px;
     margin-left: 90px;
 }
 
-/* กำหนดฟอนต์ใน CSS */
-/* กำหนดฟอนต์ Cascadia Mono */
 
-/* ใช้ฟอนต์ Cascadia Mono ใน .skills */
-/* ใช้ฟอนต์ Cascadia Mono */
 .cascadia-mono {
     font-family:  'Tuffy', serif, sans-serif;
-    font-weight: 400; /* กำหนดน้ำหนักตัวอักษร (ตัวอย่าง 400 คือปกติ) */
-    font-style: normal; /* กำหนดสไตล์เป็นปกติ */
-    font-optical-sizing: auto; /* ใช้ขนาดฟอนต์ที่เหมาะสมตามสไตล์ */
+    font-weight: 400; 
+    font-style: normal; 
+    font-optical-sizing: auto; 
     margin-left: 10px;
   }
   
@@ -495,24 +576,36 @@ main {
     min-width: 100vw;
     min-height: 20vh;
     object-fit: cover;
-    z-index: -1; /* ให้ไปอยู่ด้านหลังเนื้อหาอื่น */
-    
-}
+    z-index: -1;
+    display: block; 
+  }
+  
+  
+  @media (max-width: 768px) {
+    #video-background {
+      display: none;
+    }
+  
+    body {
+      background-color: #e7cfcf; 
+    }
+  }
+  
 
 
 
 
 
 .skills {
-  background-color: rgba(170, 123, 123, 0.7); /* ปรับค่าความโปร่ง (0-1) */
+  background-color: rgba(170, 123, 123, 0.7); 
   padding: 50px 30px;
   color: #000000;
   margin-top: 750px;
   margin-left: 700px;
   width: 60%;
   max-width: 800px;
-  border-radius: 10px; /* เพิ่มความโค้งขอบถ้าต้องการให้ดูนุ่มนวล */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้ดูเด่น */
+  border-radius: 10px; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
 }
 
   .reveal {
@@ -544,24 +637,24 @@ main {
     font-size: 1.1em;
   }
   .contact-info {
-    bottom: 0; /* อยู่ที่ขอบล่างของหน้าจอ */
-    left: 0; /* เริ่มจากขอบซ้ายสุด */
-    width: 100%; /* ให้กว้างเต็มหน้าจอ */
-    display: flex; /* ใช้ Flexbox */
-    flex-direction: row; /* ตั้งค่าเป็นแถว (แนวนอน) */
-    justify-content: center; /* จัดกลางในแนวนอน */
-    align-items: center; /* จัดกลางในแนวตั้ง */
-    text-align: center; /* จัดข้อความให้อยู่กลาง */
-    background-color: #fff; /* เพิ่มพื้นหลังเพื่อให้ชัดเจน */
-    padding: 10px 0; /* เพิ่ม padding ด้านบนและล่าง */
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้ดูเด่น */
-    z-index: 1000; /* ให้อยู่ด้านบนสุด */
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    background-color: #fff; 
+    padding: 10px 0; 
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); 
+    z-index: 1000; 
 }
 
 
 
 .contact-info div {
-    margin: 0 15px; /* เว้นระยะห่างด้านซ้ายและขวา */
+    margin: 0 15px; 
 }
 
 
@@ -577,26 +670,25 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #ffffff; /* สีปกติ */
+  color: #ffffff; 
   transition: color 0.3s ease;
 }
 
 nav.scrolled ul li a {
-  color: #aa7b7b; /* สีเมื่อเลื่อนลง */
+  color: #aa7b7b; 
 }
 
 
 nav ul li a:hover {
-    color: #afacaa; /* สีที่เปลี่ยนเมื่อชี้เมาส์ */
+    color: #afacaa; 
 }
-
 
 
 .animated-title {
     position: relative;
     left: 10px;
     top: 40px;
-    font-size: 15px; /* ← เปลี่ยนจาก 28px เป็น 32px */
+    font-size: 15px;
     color: #333;
     font-weight: bold;
     line-height: 1.8;
@@ -615,15 +707,15 @@ nav ul li a:hover {
     }
   }
   .Service {
-    font-size: 30px; /* Adjust the size of the text */
+    font-size: 30px; 
     padding: 100px 40px;
     background-color: #DBB5B5;
-    margin-bottom: 20px; /* Space below the section */
-    text-align: center; /* Center the text */
-    color: #333; /* Text color */
-    font-weight: bold; /* Make the text bold */
-    font-family: 'Tuffy', serif; /* Apply the Joan font (or any font you prefer) */
-}
+    margin-bottom: 20px; 
+    text-align: center; 
+    color: #333; 
+    font-weight: bold;
+    font-family: 'Tuffy', serif; 
+  }
 
 .Service img {
   width: 100%;
@@ -631,35 +723,35 @@ nav ul li a:hover {
   height: auto;
   margin: 10px;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* เงาภาพ */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
   margin-top: 50px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* ลื่นเมื่อเปลี่ยน */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 .reveal {
   opacity: 0;
-  transform: translateY(50px);  /* ทำให้เริ่มจากตำแหน่งต่ำลง */
+  transform: translateY(50px);  
   transition: all 0.8s ease;
 }
 
 .reveal.active {
   opacity: 1;
-  transform: translateY(0);  /* ลอยขึ้น */
+  transform: translateY(0);  
 }
 
 
 .Service img:hover {
-  transform: translateY(-10px); /* เคลื่อนภาพขึ้นเล็กน้อย */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้ชัดเจนขึ้น */
+  transform: translateY(-10px); 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
 }
 
 
 .Service img:hover {
-  transform: scale(1.05); /* ขยายเล็กน้อยเมื่อชี้ */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* เพิ่มเงาให้ลอยเด่นขึ้น */
+  transform: scale(1.05); 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); 
 }
 .skills-container {
   position: relative;
-  padding-left: 300px; /* เว้นที่สำหรับรูป */
+  padding-left: 300px; 
   max-width: 1200px;
   margin: 0 auto;
   padding-top: 20px;
@@ -681,19 +773,19 @@ nav ul li a:hover {
   text-align: center;
 
   display: flex;
-  flex-wrap: wrap; /* ทำให้ภาพสามารถย้ายไปแถวถัดไปได้ */
-  justify-content: center; /* จัดภาพให้อยู่กลาง */
-  width: 1000px; /* ให้กรอบเต็มขนาดความกว้างของ container ที่บรรจุ */
-  max-width: 1200px; /* จำกัดความกว้างสูงสุด */
-  height: 800px; /* กำหนดความสูงของกรอบ */
-  margin: 0 auto; /* จัดกรอบให้อยู่กลาง */
-  padding: 20px; /* เพิ่มพื้นที่ภายในกรอบ */
+  flex-wrap: wrap; 
+  justify-content: center; 
+  width: 1000px; 
+  max-width: 1200px; 
+  height: 800px; 
+  margin: 0 auto; 
+  padding: 20px;
   box-sizing: border-box;
   margin-top: 90px;
 
 
-  border-radius: 20px; /* ขอบมน */
-  box-shadow: 0 8px 16px rgba(0, 0, 3, 0.3); /* เงา */
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 3, 0.3); 
 }
 
 
@@ -706,18 +798,18 @@ nav ul li a:hover {
   padding: 20px;
 
   opacity: 0;
-  transform: translateX(-50px); /* เริ่มจากซ้าย */
+  transform: translateX(-50px); 
   animation: fadeInSlideLeft 1.2s ease-out forwards;
 }
 
 @keyframes fadeInSlideLeft {
   from {
     opacity: 0;
-    transform: translateX(-50px); /* เริ่มอยู่ทางซ้าย */
+    transform: translateX(-50px); 
   }
   to {
     opacity: 1;
-    transform: translateX(0); /* เข้าตำแหน่งเดิม */
+    transform: translateX(0); 
   }
 }
 
@@ -734,25 +826,24 @@ nav ul li a:hover {
 
 
 .skill h1 {
-  font-size: 2rem; /* ขนาดฟอนต์ที่เหมาะสม */
+  font-size: 2rem; 
   margin-bottom: 40px;
   color: #000000;
   font-weight: bold;
   font-family: 'Tuffy', serif;
-  position: relative; /* ใช้ position relative เพื่อให้สามารถขยับได้ */
-  left: 0px; /* ขยับไปทางขวา 20px */
-  top: 50px; /* ขยับขึ้น 10px */
-}
+  position: relative; 
+  left: 0px;
+  top: 50px}
 
 
 
 
 .skill img {
   width: 900px;
-  max-width: 250px; /* ขนาดสูงสุดของแต่ละภาพ */
+  max-width: 250px; 
   height: auto;
-  margin: 20px; /* เพิ่มระยะห่างระหว่างภาพ */
-  display: inline-block; /* ให้ภาพเรียงกันในแถว */
+  margin: 20px; 
+  display: inline-block; 
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   margin-top: 50px;
@@ -760,7 +851,7 @@ nav ul li a:hover {
   box-shadow: 0 4px 8px rgb(255, 255, 255);
 }
 
-/* Optional: Responsive image container */
+
 .skill-images {
   display: flex;
   flex-wrap: wrap;
@@ -773,13 +864,12 @@ nav ul li a:hover {
     margin-top: 100px;
     padding: 100px 40px;
     background-color: #DBB5B5;
-    font-size: 30px; /* Adjust the size of the text */
-    margin-bottom: 20px; /* Space below the section */
-    text-align: center; /* Center the text */
-    color: #333; /* Text color */
-    font-weight: bold; /* Make the text bold */
-    font-family: 'Joan', sans-serif; /* Apply the Joan font (or any font you prefer) */
-    margin-top: 100px;
+    font-size: 30px; 
+    margin-bottom: 20px; 
+    text-align: center; 
+    color: #333; 
+    font-weight: bold; 
+    font-family: 'Joan', sans-serif; 
 }
 
 
@@ -793,7 +883,7 @@ nav ul li a:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-left: 90px;
   margin-top: 90px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* เพิ่มความลื่นเมื่อเปลี่ยน */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 .reveal {
   opacity: 0;
@@ -808,19 +898,19 @@ nav ul li a:hover {
 
 
 .project img:hover {
-  transform: scale(1.05); /* ขยายขนาดเล็กน้อย */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* เพิ่มเงาเมื่อ hover */
+  transform: scale(1.05); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
 }
 
 
 .Certificates {
     margin-top: 350px;
-    font-size: 30px; /* Adjust the size of the text */
-    margin-bottom: 20px; /* Space below the section */
-    text-align: center; /* Center the text */
-    color: #333; /* Text color */
-    font-weight: bold; /* Make the text bold */
-    font-family: 'Poppins', sans-serif; /* Apply the Joan font (or any font you prefer) */
+    font-size: 30px; 
+    margin-bottom: 20px; 
+    text-align: center; 
+    color: #333; 
+    font-weight: bold; 
+    font-family: 'Poppins', sans-serif; 
 }   
 .Certificates img {
     width: 100%;
@@ -830,11 +920,11 @@ nav ul li a:hover {
     margin: 10px;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease; /* เพิ่มการเปลี่ยนแปลงแบบนุ่มนวล */
+    transition: transform 0.3s ease;
 }
 
 .Certificates img:hover {
-    transform: scale(1.10); /* ขยาย 5% เมื่อชี้ */
+    transform: scale(1.10); 
 }
 .Certificates h1 {
     font-family: 'Tuffy', serif;
@@ -843,13 +933,13 @@ nav ul li a:hover {
 
 .contect1 {
     position: relative;
-    text-align: center; /* จัดให้อยู่กลาง */
+    text-align: center; 
   }
   
   .contect1 img {
-    width: 100%; /* ให้ภาพมีความกว้าง 100% ของ container */
-    height: auto; /* ให้รักษาสัดส่วนภาพ */
-    max-width: 1200px; /* จำกัดขนาดความกว้างสูงสุด */
+    width: 100%; 
+    height: auto; 
+    max-width: 1200px; 
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     margin-top: 300px;
@@ -857,13 +947,13 @@ nav ul li a:hover {
   
   .text-box {
     position: absolute;
-    top: 75%; /* วางกล่องข้อความที่กึ่งกลางของภาพ */
+    top: 75%; 
     left: 23%;
-    transform: translate(20%, -50%); /* จัดให้อยู่กลางทั้งในแนวนอนและแนวตั้ง */
-    background-color: rgba(175, 168, 168, 0); /* สีพื้นหลังแบบโปร่งแสง */
+    transform: translate(20%, -50%); 
+    background-color: rgba(175, 168, 168, 0); 
     padding: 5px;
     border-radius: 10px;
-    width: 40%; /* ขนาดกล่องข้อความที่พอเหมาะ */
+    width: 40%; 
   }
   
   .text-box input {
@@ -882,17 +972,17 @@ nav ul li a:hover {
     opacity: 0.8;
   }
   #input2 {
-    height: 45px; /* หรือความสูงที่คุณต้องการ */
-    resize: vertical; /* อนุญาตให้ลากขยายได้ */
+    height: 45px; 
+    resize: vertical; 
   }
   #input1 {
-    height: 45px; /* หรือความสูงที่คุณต้องการ */
-    resize: vertical; /* อนุญาตให้ลากขยายได้ */
+    height: 45px; 
+    resize: vertical; 
   }
 
   #input3 {
-    height: 130px; /* หรือความสูงที่คุณต้องการ */
-    resize: vertical; /* อนุญาตให้ลากขยายได้ */
+    height: 130px; 
+    resize: vertical; 
   }
   .send {
     margin-top: 100px;
@@ -902,14 +992,14 @@ nav ul li a:hover {
     padding: 10px 20px;
     cursor: pointer;
     font-size: 20px;
-    border-radius: 999px; /* ทำให้ปุ่มเป็นวงรี */
+    border-radius: 999px; 
     top: 250px;
     margin-left: 0px;
     margin-top: 40px;
 }
 
 #portfolio1 {
-    scroll-margin-top: 1000px; /* เลื่อนเกินตำแหน่งขึ้นไปอีก 100px */
+    scroll-margin-top: 1000px; 
   }
 
   
@@ -952,21 +1042,21 @@ nav ul li a:hover {
     gap: 20px;
     justify-items: center;
     position: relative;
-    overflow: visible; /* อนุญาตให้ภาพที่ขยายแสดงนอกกล่องได้ */
+    overflow: visible; 
   }
   
   .project2 .image-grid img {
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative; /* เพื่อให้ z-index ทำงาน */
-    z-index: 1;          /* ค่าพื้นฐาน */
+    position: relative; 
+    z-index: 1;     
   }
   
   .project2 .image-grid img:hover {
-    transform: scale(1.1); /* ขยายขนาด */
+    transform: scale(1.1); 
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.45);
-    z-index: 10;           /* ลอยอยู่ด้านบนสุด */
+    z-index: 10;          
   }
   
   
@@ -994,9 +1084,7 @@ nav ul li a:hover {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
   }
   
-  /* ปุ่ม */
-
-  
+  /* ปุ่ม */  
   .project2 a:hover {
     background-color: #ffffff;
   }
